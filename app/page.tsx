@@ -11,7 +11,10 @@ export default function Home() {
       {/* HERO SECTION */}
       <section style={{ padding: '60px 20px', maxWidth: '1200px', margin: '0 auto' }}>
         {/* Full Width Name */}
-        <h1 style={{ fontSize: '56px', fontWeight: '400', margin: '0 0 30px 0', letterSpacing: '3px', fontFamily: 'Poiret One, cursive', textAlign: 'center' }}>Emma Damia</h1>
+        <h1 style={{ fontSize: '56px', fontWeight: '400', margin: '0 0 8px 0', letterSpacing: '3px', fontFamily: 'Poiret One, cursive' }}>Emma Damia</h1>
+        
+        {/* Bio Below Name - Same Width */}
+        <p style={{ fontSize: '16px', fontWeight: '300', margin: '0 0 40px 0', color: '#666', letterSpacing: '1px' }}>Fashion, Skincare and Beauty Enthusiast</p>
         
         <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '30px', alignItems: 'center' }}>
           {/* Profile Picture */}
@@ -23,12 +26,8 @@ export default function Home() {
             />
           </div>
 
-          {/* Hero Content */}
+          {/* Hero Content - Buttons Only */}
           <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
-            <div>
-              <p style={{ fontSize: '16px', fontWeight: '300', margin: '0', color: '#666', letterSpacing: '1px' }}>Fashion, Skincare and Beauty Enthusiast</p>
-            </div>
-
             {/* Social Buttons */}
             <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
               <a href="#" style={{ padding: '10px 20px', border: '1px solid #1a1a1a', borderRadius: '0px', backgroundColor: 'transparent', color: '#1a1a1a', textDecoration: 'none', fontSize: '13px', textAlign: 'center', cursor: 'pointer', transition: 'all 0.3s ease', fontFamily: 'Georgia, serif' }} onMouseEnter={(e) => { e.currentTarget.style.backgroundColor = '#1a1a1a'; e.currentTarget.style.color = '#fafaf8'; }} onMouseLeave={(e) => { e.currentTarget.style.backgroundColor = 'transparent'; e.currentTarget.style.color = '#1a1a1a'; }}>Instagram</a>
@@ -65,10 +64,10 @@ export default function Home() {
       </section>
 
       {/* MY RECENT WORKS SECTION */}
-      <section style={{ padding: '60px 20px', maxWidth: '1200px', margin: '0 auto' }}>
+      <section style={{ padding: '60px 20px 30px 20px', maxWidth: '1200px', margin: '0 auto' }}>
         <div style={{ width: '60%', margin: '0 auto 40px auto', height: '1px', backgroundColor: '#d4d4d4' }}></div>
         <h2 style={{ fontSize: '28px', fontWeight: '400', marginBottom: '30px', letterSpacing: '1px', fontFamily: 'Poiret One, cursive' }}>My Recent Works</h2>
-        <div style={{ overflowX: 'auto', paddingBottom: '20px', display: 'flex', gap: '20px' }}>
+        <div style={{ overflowX: 'auto', paddingBottom: '10px', display: 'flex', gap: '20px' }}>
           {[
             { src: '/f1.jpg', alt: 'Work 1' },
             { src: '/sb1.jpg', alt: 'Work 2' },
@@ -81,8 +80,8 @@ export default function Home() {
               onMouseLeave={() => setHoveredCard(null)}
               style={{
                 position: 'relative',
-                minWidth: '180px',
-                height: '225px',
+                minWidth: '200px',
+                height: '320px',
                 borderRadius: '0px',
                 overflow: 'hidden',
                 boxShadow: hoveredCard === idx ? '0 15px 40px rgba(0,0,0,0.15)' : '0 5px 20px rgba(0,0,0,0.08)',
@@ -124,6 +123,7 @@ export default function Home() {
 
       {/* SKINCARE & BEAUTY REVIEWS SECTION */}
       <section style={{ padding: '60px 20px', maxWidth: '1200px', margin: '0 auto' }}>
+        <div style={{ width: '60%', margin: '0 auto 40px auto', height: '1px', backgroundColor: '#d4d4d4' }}></div>
         <h2 style={{ fontSize: '28px', fontWeight: '400', marginBottom: '30px', letterSpacing: '1px', fontFamily: 'Poiret One, cursive' }}>Skincare & Beauty Reviews</h2>
         <div style={{ display: 'grid', gridTemplateColumns: '1.5fr 1fr', gap: '20px', gridTemplateRows: 'auto auto' }}>
           {/* Left Column - One large card */}
@@ -143,6 +143,7 @@ export default function Home() {
 
       {/* CTA SECTION */}
       <section style={{ padding: '60px 20px', maxWidth: '1200px', margin: '0 auto' }}>
+        <div style={{ width: '60%', margin: '0 auto 40px auto', height: '1px', backgroundColor: '#d4d4d4' }}></div>
         <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '30px', alignItems: 'center' }}>
           {/* CTA Image */}
           <div style={{ borderRadius: '0px', overflow: 'hidden' }}>
