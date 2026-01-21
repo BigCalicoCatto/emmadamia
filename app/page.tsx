@@ -1,15 +1,52 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 
 export default function Home() {
   const [hoveredCard, setHoveredCard] = useState<number | null>(null);
+  const [visibleSections, setVisibleSections] = useState<Set<string>>(new Set());
+  const sectionRefs = useRef<{ [key: string]: HTMLElement | null }>({});
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setVisibleSections((prev) => new Set([...prev, entry.target.id]));
+          } else {
+            setVisibleSections((prev) => {
+              const newSet = new Set(prev);
+              newSet.delete(entry.target.id);
+              return newSet;
+            });
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    Object.values(sectionRefs.current).forEach((ref) => {
+      if (ref) observer.observe(ref);
+    });
+
+    return () => observer.disconnect();
+  }, []);
+
+  const sectionStyle = (id: string) => ({
+    opacity: visibleSections.has(id) ? 1 : 0,
+    transform: visibleSections.has(id) ? 'translateY(0)' : 'translateY(20px)',
+    transition: 'all 0.6s ease-out',
+  });
 
   return (
     <div style={{ fontFamily: 'Georgia, serif', backgroundColor: '#fafaf8', color: '#1a1a1a', minHeight: '100vh' }}>
       
       {/* HERO SECTION */}
-      <section style={{ padding: '60px 20px 30px 20px', maxWidth: '1200px', margin: '0 auto' }}>
+      <section 
+        ref={(el) => { if (el) sectionRefs.current['hero'] = el; }}
+        id="hero"
+        style={{ padding: '60px 20px 30px 20px', maxWidth: '1200px', margin: '0 auto', ...sectionStyle('hero') }}
+      >
         {/* Full Width Name */}
         <h1 style={{ fontSize: '56px', fontWeight: '400', margin: '0 0 8px 0', letterSpacing: '3px', fontFamily: 'Poiret One, cursive' }}>Emma Damia</h1>
         
@@ -41,7 +78,11 @@ export default function Home() {
       </section>
 
       {/* ABOUT ME SECTION */}
-      <section style={{ padding: '30px 20px 30px 20px', maxWidth: '1200px', margin: '0 auto' }}>
+      <section 
+        ref={(el) => { if (el) sectionRefs.current['about'] = el; }}
+        id="about"
+        style={{ padding: '30px 20px 30px 20px', maxWidth: '1200px', margin: '0 auto', ...sectionStyle('about') }}
+      >
         <div style={{ width: '60%', margin: '0 auto 40px auto', height: '1px', backgroundColor: '#d4d4d4' }}></div>
         <h2 style={{ fontSize: '28px', fontWeight: '400', marginBottom: '30px', letterSpacing: '1px', fontFamily: 'Poiret One, cursive' }}>About Me</h2>
         <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '40px', alignItems: 'center' }}>
@@ -64,7 +105,11 @@ export default function Home() {
       </section>
 
       {/* MY RECENT WORKS SECTION */}
-      <section style={{ padding: '60px 20px 30px 20px', maxWidth: '1200px', margin: '0 auto' }}>
+      <section 
+        ref={(el) => { if (el) sectionRefs.current['recent'] = el; }}
+        id="recent"
+        style={{ padding: '30px 20px 30px 20px', maxWidth: '1200px', margin: '0 auto', ...sectionStyle('recent') }}
+      >
         <div style={{ width: '60%', margin: '0 auto 40px auto', height: '1px', backgroundColor: '#d4d4d4' }}></div>
         <h2 style={{ fontSize: '28px', fontWeight: '400', marginBottom: '30px', letterSpacing: '1px', fontFamily: 'Poiret One, cursive' }}>My Recent Works</h2>
         <div style={{ overflowX: 'auto', paddingBottom: '10px', display: 'flex', gap: '20px' }}>
@@ -102,7 +147,11 @@ export default function Home() {
       </section>
 
       {/* FASHION SECTION */}
-      <section style={{ padding: '30px 20px', maxWidth: '1200px', margin: '0 auto' }}>
+      <section 
+        ref={(el) => { if (el) sectionRefs.current['fashion'] = el; }}
+        id="fashion"
+        style={{ padding: '30px 20px', maxWidth: '1200px', margin: '0 auto', ...sectionStyle('fashion') }}
+      >
         <div style={{ width: '60%', margin: '0 auto 40px auto', height: '1px', backgroundColor: '#d4d4d4' }}></div>
         <h2 style={{ fontSize: '28px', fontWeight: '400', marginBottom: '30px', letterSpacing: '1px', fontFamily: 'Poiret One, cursive' }}>Fashion</h2>
         <div style={{ display: 'grid', gridTemplateColumns: '1fr 1.5fr', gap: '20px', gridTemplateRows: 'auto auto' }}>
@@ -122,7 +171,11 @@ export default function Home() {
       </section>
 
       {/* SKINCARE & BEAUTY REVIEWS SECTION */}
-      <section style={{ padding: '30px 20px', maxWidth: '1200px', margin: '0 auto' }}>
+      <section 
+        ref={(el) => { if (el) sectionRefs.current['skincare'] = el; }}
+        id="skincare"
+        style={{ padding: '30px 20px', maxWidth: '1200px', margin: '0 auto', ...sectionStyle('skincare') }}
+      >
         <div style={{ width: '60%', margin: '0 auto 40px auto', height: '1px', backgroundColor: '#d4d4d4' }}></div>
         <h2 style={{ fontSize: '28px', fontWeight: '400', marginBottom: '30px', letterSpacing: '1px', fontFamily: 'Poiret One, cursive' }}>Skincare & Beauty Reviews</h2>
         <div style={{ display: 'grid', gridTemplateColumns: '1.5fr 1fr', gap: '20px', gridTemplateRows: 'auto auto' }}>
@@ -142,7 +195,11 @@ export default function Home() {
       </section>
 
       {/* CTA SECTION */}
-      <section style={{ padding: '30px 20px', maxWidth: '1200px', margin: '0 auto' }}>
+      <section 
+        ref={(el) => { if (el) sectionRefs.current['cta'] = el; }}
+        id="cta"
+        style={{ padding: '30px 20px', maxWidth: '1200px', margin: '0 auto', ...sectionStyle('cta') }}
+      >
         <div style={{ width: '60%', margin: '0 auto 40px auto', height: '1px', backgroundColor: '#d4d4d4' }}></div>
         <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '30px', alignItems: 'center' }}>
           {/* CTA Image */}
