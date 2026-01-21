@@ -10,7 +10,7 @@ export default function Home() {
       
       {/* HERO SECTION */}
       <section style={{ padding: '60px 20px', maxWidth: '1200px', margin: '0 auto' }}>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '40px', alignItems: 'center' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '30px', alignItems: 'center' }}>
           {/* Profile Picture */}
           <div style={{ display: 'flex', justifyContent: 'center' }}>
             <img
@@ -23,7 +23,7 @@ export default function Home() {
           {/* Hero Content */}
           <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
             <div>
-              <h1 style={{ fontSize: '42px', fontWeight: '400', margin: '0 0 8px 0', letterSpacing: '2px' }}>Emma Damia</h1>
+              <h1 style={{ fontSize: '42px', fontWeight: '400', margin: '0 0 8px 0', letterSpacing: '2px', fontFamily: 'Poiret One, cursive' }}>Emma Damia</h1>
               <p style={{ fontSize: '16px', fontWeight: '300', margin: '0', color: '#666', letterSpacing: '1px' }}>Fashion, Skincare and Beauty Enthusiast</p>
             </div>
 
@@ -40,17 +40,18 @@ export default function Home() {
       </section>
 
       {/* ABOUT ME SECTION */}
-      <section style={{ padding: '60px 20px', maxWidth: '1200px', margin: '0 auto' }}>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '40px', alignItems: 'center' }}>
+      <section style={{ padding: '40px 20px', maxWidth: '1200px', margin: '0 auto' }}>
+        <h2 style={{ fontSize: '28px', fontWeight: '400', marginBottom: '30px', letterSpacing: '1px', fontFamily: 'Poiret One, cursive' }}>About Me</h2>
+        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '40px', alignItems: 'center' }}>
           {/* About Text */}
-          <div style={{ order: 2, minHeight: '300px', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+          <div style={{ minHeight: '300px', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
             <p style={{ fontSize: '16px', lineHeight: '1.8', margin: '0 0 20px 0', fontWeight: '300' }}>I believe beauty lives in simplicity — in skincare that feels like self-care, outfits that breathe confidence, and moments captured without noise.</p>
             <p style={{ fontSize: '16px', lineHeight: '1.8', margin: '0 0 30px 0', fontWeight: '300' }}>This space is my white canvas: calm, intentional, and entirely mine.</p>
             <p style={{ fontSize: '12px', lineHeight: '1.6', color: '#999', fontStyle: 'italic' }}>Note: Emma Damia is a fictional persona created solely to demonstrate website layout and aesthetic styling. All content is imagined for illustrative purposes. Your real site will feature your authentic voice, photos, and story.</p>
           </div>
 
           {/* About Image */}
-          <div style={{ order: 1, width: '100%' }}>
+          <div style={{ width: '100%' }}>
             <img
               src="/am.jpg"
               alt="About Emma"
@@ -62,7 +63,7 @@ export default function Home() {
 
       {/* MY RECENT WORKS SECTION */}
       <section style={{ padding: '60px 20px', maxWidth: '1200px', margin: '0 auto' }}>
-        <h2 style={{ fontSize: '28px', fontWeight: '400', marginBottom: '30px', letterSpacing: '1px' }}>My Recent Works</h2>
+        <h2 style={{ fontSize: '28px', fontWeight: '400', marginBottom: '30px', letterSpacing: '1px', fontFamily: 'Poiret One, cursive' }}>My Recent Works</h2>
         <div style={{ overflowX: 'auto', paddingBottom: '20px', display: 'flex', gap: '20px' }}>
           {[
             { src: '/f1.jpg', alt: 'Work 1' },
@@ -99,7 +100,7 @@ export default function Home() {
 
       {/* FASHION SECTION */}
       <section style={{ padding: '60px 20px', maxWidth: '1200px', margin: '0 auto' }}>
-        <h2 style={{ fontSize: '28px', fontWeight: '400', marginBottom: '30px', letterSpacing: '1px' }}>Fashion</h2>
+        <h2 style={{ fontSize: '28px', fontWeight: '400', marginBottom: '30px', letterSpacing: '1px', fontFamily: 'Poiret One, cursive' }}>Fashion</h2>
         <div style={{ display: 'grid', gridTemplateColumns: '1fr 1.5fr', gap: '20px', gridTemplateRows: 'auto auto' }}>
           {/* Left Column - Two small cards */}
           <div style={{ borderRadius: '0px', overflow: 'hidden', boxShadow: '0 5px 20px rgba(0,0,0,0.08)' }}>
@@ -118,7 +119,7 @@ export default function Home() {
 
       {/* SKINCARE & BEAUTY REVIEWS SECTION */}
       <section style={{ padding: '60px 20px', maxWidth: '1200px', margin: '0 auto' }}>
-        <h2 style={{ fontSize: '28px', fontWeight: '400', marginBottom: '30px', letterSpacing: '1px' }}>Skincare & Beauty Reviews</h2>
+        <h2 style={{ fontSize: '28px', fontWeight: '400', marginBottom: '30px', letterSpacing: '1px', fontFamily: 'Poiret One, cursive' }}>Skincare & Beauty Reviews</h2>
         <div style={{ display: 'grid', gridTemplateColumns: '1.5fr 1fr', gap: '20px', gridTemplateRows: 'auto auto' }}>
           {/* Left Column - One large card */}
           <div style={{ borderRadius: '0px', overflow: 'hidden', boxShadow: '0 5px 20px rgba(0,0,0,0.08)', gridColumn: '1', gridRow: '1 / 3' }}>
@@ -137,7 +138,7 @@ export default function Home() {
 
       {/* CTA SECTION */}
       <section style={{ padding: '60px 20px', maxWidth: '1200px', margin: '0 auto' }}>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '30px', alignItems: 'center' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '30px', alignItems: 'center' }}>
           {/* CTA Image */}
           <div style={{ borderRadius: '0px', overflow: 'hidden' }}>
             <img src="/dp.jpg" alt="Emma" style={{ width: '100%', height: '250px', objectFit: 'cover', display: 'block' }} />
@@ -145,9 +146,12 @@ export default function Home() {
 
           {/* CTA Buttons */}
           <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
-            <a href="mailto:" style={{ padding: '12px 24px', border: '1px solid #1a1a1a', borderRadius: '0px', backgroundColor: 'transparent', color: '#1a1a1a', textDecoration: 'none', fontSize: '13px', textAlign: 'center', cursor: 'pointer', transition: 'all 0.3s ease', fontFamily: 'Georgia, serif' }} onMouseEnter={(e) => { e.currentTarget.style.backgroundColor = '#1a1a1a'; e.currentTarget.style.color = '#fafaf8'; }} onMouseLeave={(e) => { e.currentTarget.style.backgroundColor = 'transparent'; e.currentTarget.style.color = '#1a1a1a'; }}>Email</a>
-            <a href="#" style={{ padding: '12px 24px', border: '1px solid #1a1a1a', borderRadius: '0px', backgroundColor: 'transparent', color: '#1a1a1a', textDecoration: 'none', fontSize: '13px', textAlign: 'center', cursor: 'pointer', transition: 'all 0.3s ease', fontFamily: 'Georgia, serif' }} onMouseEnter={(e) => { e.currentTarget.style.backgroundColor = '#1a1a1a'; e.currentTarget.style.color = '#fafaf8'; }} onMouseLeave={(e) => { e.currentTarget.style.backgroundColor = 'transparent'; e.currentTarget.style.color = '#1a1a1a'; }}>WhatsApp</a>
-            <a href="https://instagram.com" style={{ padding: '12px 24px', border: '1px solid #1a1a1a', borderRadius: '0px', backgroundColor: 'transparent', color: '#1a1a1a', textDecoration: 'none', fontSize: '13px', textAlign: 'center', cursor: 'pointer', transition: 'all 0.3s ease', fontFamily: 'Georgia, serif' }} onMouseEnter={(e) => { e.currentTarget.style.backgroundColor = '#1a1a1a'; e.currentTarget.style.color = '#fafaf8'; }} onMouseLeave={(e) => { e.currentTarget.style.backgroundColor = 'transparent'; e.currentTarget.style.color = '#1a1a1a'; }}>DM on Instagram</a>
+            <p style={{ fontSize: '16px', fontWeight: '300', marginBottom: '10px', lineHeight: '1.6' }}>Let's collaborate and create something beautiful together. Reach out through your preferred channel.</p>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
+              <a href="mailto:" style={{ padding: '12px 24px', border: '1px solid #1a1a1a', borderRadius: '0px', backgroundColor: 'transparent', color: '#1a1a1a', textDecoration: 'none', fontSize: '13px', textAlign: 'center', cursor: 'pointer', transition: 'all 0.3s ease', fontFamily: 'Georgia, serif' }} onMouseEnter={(e) => { e.currentTarget.style.backgroundColor = '#1a1a1a'; e.currentTarget.style.color = '#fafaf8'; }} onMouseLeave={(e) => { e.currentTarget.style.backgroundColor = 'transparent'; e.currentTarget.style.color = '#1a1a1a'; }}>Email</a>
+              <a href="#" style={{ padding: '12px 24px', border: '1px solid #1a1a1a', borderRadius: '0px', backgroundColor: 'transparent', color: '#1a1a1a', textDecoration: 'none', fontSize: '13px', textAlign: 'center', cursor: 'pointer', transition: 'all 0.3s ease', fontFamily: 'Georgia, serif' }} onMouseEnter={(e) => { e.currentTarget.style.backgroundColor = '#1a1a1a'; e.currentTarget.style.color = '#fafaf8'; }} onMouseLeave={(e) => { e.currentTarget.style.backgroundColor = 'transparent'; e.currentTarget.style.color = '#1a1a1a'; }}>WhatsApp</a>
+              <a href="https://instagram.com" style={{ padding: '12px 24px', border: '1px solid #1a1a1a', borderRadius: '0px', backgroundColor: 'transparent', color: '#1a1a1a', textDecoration: 'none', fontSize: '13px', textAlign: 'center', cursor: 'pointer', transition: 'all 0.3s ease', fontFamily: 'Georgia, serif' }} onMouseEnter={(e) => { e.currentTarget.style.backgroundColor = '#1a1a1a'; e.currentTarget.style.color = '#fafaf8'; }} onMouseLeave={(e) => { e.currentTarget.style.backgroundColor = 'transparent'; e.currentTarget.style.color = '#1a1a1a'; }}>DM on Instagram</a>
+            </div>
           </div>
         </div>
       </section>
