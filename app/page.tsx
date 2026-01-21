@@ -9,7 +9,7 @@ export default function Home() {
     <div style={{ fontFamily: 'Georgia, serif', backgroundColor: '#fafaf8', color: '#1a1a1a', minHeight: '100vh' }}>
       
       {/* HERO SECTION */}
-      <section style={{ padding: '60px 20px', maxWidth: '1200px', margin: '0 auto' }}>
+      <section style={{ padding: '60px 20px 30px 20px', maxWidth: '1200px', margin: '0 auto' }}>
         {/* Full Width Name */}
         <h1 style={{ fontSize: '56px', fontWeight: '400', margin: '0 0 8px 0', letterSpacing: '3px', fontFamily: 'Poiret One, cursive' }}>Emma Damia</h1>
         
@@ -41,7 +41,7 @@ export default function Home() {
       </section>
 
       {/* ABOUT ME SECTION */}
-      <section style={{ padding: '40px 20px', maxWidth: '1200px', margin: '0 auto' }}>
+      <section style={{ padding: '30px 20px 30px 20px', maxWidth: '1200px', margin: '0 auto' }}>
         <div style={{ width: '60%', margin: '0 auto 40px auto', height: '1px', backgroundColor: '#d4d4d4' }}></div>
         <h2 style={{ fontSize: '28px', fontWeight: '400', marginBottom: '30px', letterSpacing: '1px', fontFamily: 'Poiret One, cursive' }}>About Me</h2>
         <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '40px', alignItems: 'center' }}>
@@ -102,7 +102,7 @@ export default function Home() {
       </section>
 
       {/* FASHION SECTION */}
-      <section style={{ padding: '60px 20px', maxWidth: '1200px', margin: '0 auto' }}>
+      <section style={{ padding: '30px 20px', maxWidth: '1200px', margin: '0 auto' }}>
         <div style={{ width: '60%', margin: '0 auto 40px auto', height: '1px', backgroundColor: '#d4d4d4' }}></div>
         <h2 style={{ fontSize: '28px', fontWeight: '400', marginBottom: '30px', letterSpacing: '1px', fontFamily: 'Poiret One, cursive' }}>Fashion</h2>
         <div style={{ display: 'grid', gridTemplateColumns: '1fr 1.5fr', gap: '20px', gridTemplateRows: 'auto auto' }}>
@@ -122,7 +122,7 @@ export default function Home() {
       </section>
 
       {/* SKINCARE & BEAUTY REVIEWS SECTION */}
-      <section style={{ padding: '60px 20px', maxWidth: '1200px', margin: '0 auto' }}>
+      <section style={{ padding: '30px 20px', maxWidth: '1200px', margin: '0 auto' }}>
         <div style={{ width: '60%', margin: '0 auto 40px auto', height: '1px', backgroundColor: '#d4d4d4' }}></div>
         <h2 style={{ fontSize: '28px', fontWeight: '400', marginBottom: '30px', letterSpacing: '1px', fontFamily: 'Poiret One, cursive' }}>Skincare & Beauty Reviews</h2>
         <div style={{ display: 'grid', gridTemplateColumns: '1.5fr 1fr', gap: '20px', gridTemplateRows: 'auto auto' }}>
@@ -142,7 +142,7 @@ export default function Home() {
       </section>
 
       {/* CTA SECTION */}
-      <section style={{ padding: '60px 20px', maxWidth: '1200px', margin: '0 auto' }}>
+      <section style={{ padding: '30px 20px', maxWidth: '1200px', margin: '0 auto' }}>
         <div style={{ width: '60%', margin: '0 auto 40px auto', height: '1px', backgroundColor: '#d4d4d4' }}></div>
         <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '30px', alignItems: 'center' }}>
           {/* CTA Image */}
