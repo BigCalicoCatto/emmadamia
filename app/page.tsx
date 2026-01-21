@@ -10,6 +10,9 @@ export default function Home() {
       
       {/* HERO SECTION */}
       <section style={{ padding: '60px 20px', maxWidth: '1200px', margin: '0 auto' }}>
+        {/* Full Width Name */}
+        <h1 style={{ fontSize: '56px', fontWeight: '400', margin: '0 0 30px 0', letterSpacing: '3px', fontFamily: 'Poiret One, cursive', textAlign: 'center' }}>Emma Damia</h1>
+        
         <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '30px', alignItems: 'center' }}>
           {/* Profile Picture */}
           <div style={{ display: 'flex', justifyContent: 'center' }}>
@@ -23,7 +26,6 @@ export default function Home() {
           {/* Hero Content */}
           <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
             <div>
-              <h1 style={{ fontSize: '42px', fontWeight: '400', margin: '0 0 8px 0', letterSpacing: '2px', fontFamily: 'Poiret One, cursive' }}>Emma Damia</h1>
               <p style={{ fontSize: '16px', fontWeight: '300', margin: '0', color: '#666', letterSpacing: '1px' }}>Fashion, Skincare and Beauty Enthusiast</p>
             </div>
 
@@ -41,6 +43,7 @@ export default function Home() {
 
       {/* ABOUT ME SECTION */}
       <section style={{ padding: '40px 20px', maxWidth: '1200px', margin: '0 auto' }}>
+        <div style={{ width: '60%', margin: '0 auto 40px auto', height: '1px', backgroundColor: '#d4d4d4' }}></div>
         <h2 style={{ fontSize: '28px', fontWeight: '400', marginBottom: '30px', letterSpacing: '1px', fontFamily: 'Poiret One, cursive' }}>About Me</h2>
         <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '40px', alignItems: 'center' }}>
           {/* About Text */}
@@ -63,6 +66,7 @@ export default function Home() {
 
       {/* MY RECENT WORKS SECTION */}
       <section style={{ padding: '60px 20px', maxWidth: '1200px', margin: '0 auto' }}>
+        <div style={{ width: '60%', margin: '0 auto 40px auto', height: '1px', backgroundColor: '#d4d4d4' }}></div>
         <h2 style={{ fontSize: '28px', fontWeight: '400', marginBottom: '30px', letterSpacing: '1px', fontFamily: 'Poiret One, cursive' }}>My Recent Works</h2>
         <div style={{ overflowX: 'auto', paddingBottom: '20px', display: 'flex', gap: '20px' }}>
           {[
@@ -100,6 +104,7 @@ export default function Home() {
 
       {/* FASHION SECTION */}
       <section style={{ padding: '60px 20px', maxWidth: '1200px', margin: '0 auto' }}>
+        <div style={{ width: '60%', margin: '0 auto 40px auto', height: '1px', backgroundColor: '#d4d4d4' }}></div>
         <h2 style={{ fontSize: '28px', fontWeight: '400', marginBottom: '30px', letterSpacing: '1px', fontFamily: 'Poiret One, cursive' }}>Fashion</h2>
         <div style={{ display: 'grid', gridTemplateColumns: '1fr 1.5fr', gap: '20px', gridTemplateRows: 'auto auto' }}>
           {/* Left Column - Two small cards */}
