@@ -47,11 +47,14 @@ export default function Home() {
         id="hero"
         style={{ padding: '60px 20px 30px 20px', maxWidth: '1200px', margin: '0 auto', ...sectionStyle('hero') }}
       >
+        {/* Decorative Flourish */}
+        <div style={{ width: '80%', margin: '0 auto 30px auto', height: '1px', backgroundColor: '#d4d4d4' }}></div>
+
         {/* Full Width Name */}
-        <h1 style={{ fontSize: '56px', fontWeight: '400', margin: '0 0 8px 0', letterSpacing: '3px', fontFamily: 'Poiret One, cursive' }}>Emma Damia</h1>
+        <h1 style={{ fontSize: '56px', fontWeight: '400', margin: '0 0 8px 0', letterSpacing: '3px', fontFamily: 'Poiret One, cursive', textAlign: 'center' }}>Emma Damia</h1>
         
         {/* Bio Below Name - Same Width */}
-        <p style={{ fontSize: '16px', fontWeight: '300', margin: '0 0 40px 0', color: '#666', letterSpacing: '1px' }}>Fashion, Skincare and Beauty Enthusiast</p>
+        <p style={{ fontSize: '16px', fontWeight: '300', margin: '0 0 40px 0', color: '#666', letterSpacing: '1px', textAlign: 'center' }}>Fashion, Skincare and Beauty Enthusiast</p>
         
         <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '30px', alignItems: 'center' }}>
           {/* Profile Picture */}
@@ -129,7 +132,7 @@ export default function Home() {
                 height: '320px',
                 borderRadius: '0px',
                 overflow: 'hidden',
-                boxShadow: hoveredCard === idx ? '0 15px 40px rgba(0,0,0,0.15)' : '0 5px 20px rgba(0,0,0,0.08)',
+                boxShadow: hoveredCard === idx ? '0 20px 50px rgba(0,0,0,0.2)' : '0 8px 25px rgba(0,0,0,0.12)',
                 transition: 'all 0.4s ease',
                 transform: hoveredCard === idx ? 'translateY(-8px)' : 'translateY(0)',
                 textDecoration: 'none',
@@ -156,15 +159,15 @@ export default function Home() {
         <h2 style={{ fontSize: '28px', fontWeight: '400', marginBottom: '30px', letterSpacing: '1px', fontFamily: 'Poiret One, cursive' }}>Fashion</h2>
         <div style={{ display: 'grid', gridTemplateColumns: '1fr 1.5fr', gap: '20px', gridTemplateRows: 'auto auto' }}>
           {/* Left Column - Two small cards */}
-          <div style={{ borderRadius: '0px', overflow: 'hidden', boxShadow: '0 5px 20px rgba(0,0,0,0.08)' }}>
+          <div style={{ borderRadius: '0px', overflow: 'hidden', boxShadow: '0 8px 25px rgba(0,0,0,0.12)' }}>
             <img src="/f1.jpg" alt="Fashion 1" style={{ width: '100%', height: '300px', objectFit: 'cover', display: 'block' }} />
           </div>
-          <div style={{ borderRadius: '0px', overflow: 'hidden', boxShadow: '0 5px 20px rgba(0,0,0,0.08)', gridColumn: '1', gridRow: '2' }}>
+          <div style={{ borderRadius: '0px', overflow: 'hidden', boxShadow: '0 8px 25px rgba(0,0,0,0.12)', gridColumn: '1', gridRow: '2' }}>
             <img src="/f2.jpg" alt="Fashion 2" style={{ width: '100%', height: '300px', objectFit: 'cover', display: 'block' }} />
           </div>
 
           {/* Right Column - One large card */}
-          <div style={{ borderRadius: '0px', overflow: 'hidden', boxShadow: '0 5px 20px rgba(0,0,0,0.08)', gridColumn: '2', gridRow: '1 / 3' }}>
+          <div style={{ borderRadius: '0px', overflow: 'hidden', boxShadow: '0 8px 25px rgba(0,0,0,0.12)', gridColumn: '2', gridRow: '1 / 3' }}>
             <img src="/f3.jpg" alt="Fashion 3" style={{ width: '100%', height: '620px', objectFit: 'cover', display: 'block' }} />
           </div>
         </div>
@@ -180,15 +183,15 @@ export default function Home() {
         <h2 style={{ fontSize: '28px', fontWeight: '400', marginBottom: '30px', letterSpacing: '1px', fontFamily: 'Poiret One, cursive' }}>Skincare & Beauty Reviews</h2>
         <div style={{ display: 'grid', gridTemplateColumns: '1.5fr 1fr', gap: '20px', gridTemplateRows: 'auto auto' }}>
           {/* Left Column - One large card */}
-          <div style={{ borderRadius: '0px', overflow: 'hidden', boxShadow: '0 5px 20px rgba(0,0,0,0.08)', gridColumn: '1', gridRow: '1 / 3' }}>
+          <div style={{ borderRadius: '0px', overflow: 'hidden', boxShadow: '0 8px 25px rgba(0,0,0,0.12)', gridColumn: '1', gridRow: '1 / 3' }}>
             <img src="/sb1.jpg" alt="Skincare 1" style={{ width: '100%', height: '620px', objectFit: 'cover', display: 'block' }} />
           </div>
 
           {/* Right Column - Two small cards */}
-          <div style={{ borderRadius: '0px', overflow: 'hidden', boxShadow: '0 5px 20px rgba(0,0,0,0.08)' }}>
+          <div style={{ borderRadius: '0px', overflow: 'hidden', boxShadow: '0 8px 25px rgba(0,0,0,0.12)' }}>
             <img src="/sb2.jpg" alt="Skincare 2" style={{ width: '100%', height: '300px', objectFit: 'cover', display: 'block' }} />
           </div>
-          <div style={{ borderRadius: '0px', overflow: 'hidden', boxShadow: '0 5px 20px rgba(0,0,0,0.08)', gridColumn: '2', gridRow: '2' }}>
+          <div style={{ borderRadius: '0px', overflow: 'hidden', boxShadow: '0 8px 25px rgba(0,0,0,0.12)', gridColumn: '2', gridRow: '2' }}>
             <img src="/sb3.jpg" alt="Skincare 3" style={{ width: '100%', height: '300px', objectFit: 'cover', display: 'block' }} />
           </div>
         </div>
